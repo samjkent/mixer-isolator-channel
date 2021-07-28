@@ -143,16 +143,14 @@ Text Label 4250 5050 2    50   ~ 0
 INPUT_R
 Text Label 4250 4300 2    50   ~ 0
 INPUT_L
-Text Label 5700 4200 0    50   ~ 0
+Text Label 5850 4050 0    50   ~ 0
 L
-Text Label 5700 5100 0    50   ~ 0
+Text Label 5850 4950 0    50   ~ 0
 R
 Wire Wire Line
 	5700 5100 5600 5100
-Connection ~ 5600 5100
 Wire Wire Line
 	5700 4200 5600 4200
-Connection ~ 5600 4200
 $Comp
 L Amplifier_Operational:TL074 U102
 U 5 1 603C7534
@@ -239,20 +237,20 @@ Connection ~ 7900 4900
 $Comp
 L Device:R_POT_Dual_Separate RV105
 U 1 1 603DA8C9
-P 5750 4600
-F 0 "RV105" H 5680 4554 50  0000 R CNN
-F 1 "INPUT_GAIN" H 5680 4645 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 5750 4600 50  0001 C CNN
-F 3 "~" H 5750 4600 50  0001 C CNN
-	1    5750 4600
-	0    -1   -1   0   
+P 5700 4050
+F 0 "RV105" H 5630 4004 50  0000 R CNN
+F 1 "INPUT_GAIN" H 5630 4095 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 5700 4050 50  0001 C CNN
+F 3 "~" H 5700 4050 50  0001 C CNN
+	1    5700 4050
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R110
 U 1 1 603E11E8
 P 5100 4650
 F 0 "R110" V 4893 4650 50  0000 C CNN
-F 1 "10k" V 4984 4650 50  0000 C CNN
+F 1 "50k" V 4984 4650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5030 4650 50  0001 C CNN
 F 3 "~" H 5100 4650 50  0001 C CNN
 	1    5100 4650
@@ -265,7 +263,7 @@ L Device:R R111
 U 1 1 603E4900
 P 5100 5550
 F 0 "R111" V 4893 5550 50  0000 C CNN
-F 1 "10k" V 4984 5550 50  0000 C CNN
+F 1 "50k" V 4984 5550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5030 5550 50  0001 C CNN
 F 3 "~" H 5100 5550 50  0001 C CNN
 	1    5100 5550
@@ -1284,42 +1282,14 @@ Wire Wire Line
 $Comp
 L Device:R_POT_Dual_Separate RV105
 U 2 1 603E365D
-P 5750 5600
-F 0 "RV105" H 5680 5554 50  0000 R CNN
-F 1 "INPUT_GAIN" H 5680 5645 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 5750 5600 50  0001 C CNN
-F 3 "~" H 5750 5600 50  0001 C CNN
-	2    5750 5600
-	0    -1   -1   0   
+P 5700 4950
+F 0 "RV105" H 5630 4904 50  0000 R CNN
+F 1 "INPUT_GAIN" H 5630 4995 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09L_Double_Vertical" H 5700 4950 50  0001 C CNN
+F 3 "~" H 5700 4950 50  0001 C CNN
+	2    5700 4950
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 5550 5450 5550
-Wire Wire Line
-	5600 5100 5600 5600
-Wire Wire Line
-	5750 5450 5900 5450
-Wire Wire Line
-	5900 5450 5900 5600
-Wire Wire Line
-	5900 5600 5900 5700
-Wire Wire Line
-	5900 5700 5450 5700
-Wire Wire Line
-	5450 5700 5450 5550
-Connection ~ 5900 5600
-Wire Wire Line
-	5600 4200 5600 4600
-Wire Wire Line
-	5750 4450 5900 4450
-Wire Wire Line
-	5900 4450 5900 4600
-Wire Wire Line
-	5900 4600 5900 4750
-Wire Wire Line
-	5900 4750 5450 4750
-Wire Wire Line
-	5450 4750 5450 4650
-Connection ~ 5900 4600
 Wire Wire Line
 	5250 4650 5450 4650
 Wire Wire Line
@@ -1340,4 +1310,38 @@ Wire Wire Line
 	2800 6900 2800 7000
 Connection ~ 2800 6900
 Connection ~ 2800 7000
+Wire Wire Line
+	5450 4650 5450 4300
+Wire Wire Line
+	5450 4300 5600 4300
+Wire Wire Line
+	5600 4300 5600 4200
+Connection ~ 5600 4200
+$Comp
+L power:GND #PWR0170
+U 1 1 60826CD2
+P 5700 3900
+F 0 "#PWR0170" H 5700 3650 50  0001 C CNN
+F 1 "GND" H 5700 3750 50  0000 C CNN
+F 2 "" H 5700 3900 50  0001 C CNN
+F 3 "" H 5700 3900 50  0001 C CNN
+	1    5700 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 5550 5700 5100
+Wire Wire Line
+	5250 5550 5700 5550
+Connection ~ 5700 5100
+$Comp
+L power:GND #PWR0171
+U 1 1 60835A29
+P 5700 4800
+F 0 "#PWR0171" H 5700 4550 50  0001 C CNN
+F 1 "GND" H 5705 4627 50  0000 C CNN
+F 2 "" H 5700 4800 50  0001 C CNN
+F 3 "" H 5700 4800 50  0001 C CNN
+	1    5700 4800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
